@@ -28,7 +28,7 @@ int main(){
   newtext.close();
 
   //Task B
-  std::cout << "\n" << actualIndent("newtext.txt") << std::endl;
+  std::cout << "\n-------------------------------\n" << actualIndent("newtext.txt") << std::endl;
   
   return 0;
 }
