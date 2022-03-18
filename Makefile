@@ -5,12 +5,12 @@ main: main.o unindent.o indent.o
 
 unindent.o: unindent.cpp unindent.h
 
-indent.o: indent.cpp indent.h
+indent.o: indent.cpp indent.h unindent.h
 
 main.o: main.cpp indent.h unindent.h
 
 clean:
-	rm -f main $(OBJECTS)
+	rm -f main $(OBJECTS) newtext.txt
 help:
 	@echo "Targets:"
 	@echo " main"

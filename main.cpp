@@ -21,19 +21,14 @@ int main(){
     std::cout << removeLeadingSpaces(file) << std::endl;
 
     newtext << removeLeadingSpaces(file);
+    newtext << "\n";
     }
 
   text.close();
   newtext.close();
 
   //Task B
-  std::ifstream textB;
-  textB.open("newtext.txt");
-  std::string fileB;
-
-  while(getline(textB, fileB)){
-    std::cout << countChar(fileB, '{') << countChar(fileB, '}') << std::endl;
-  }
+  std::cout << "\n" << actualIndent("newtext.txt") << std::endl;
   
   return 0;
 }
