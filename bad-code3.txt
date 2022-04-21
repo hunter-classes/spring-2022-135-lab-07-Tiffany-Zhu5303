@@ -1,0 +1,11 @@
+    int main(){
+                // Hi, this is an additonal bad file!
+int size = 4; 
+    for(int i = 0; i < size; i++) {
+            if (i % 2 == 0){
+                i = pow(i, 2);
+                                            }
+                        cout << "this is number " << i;
+    cout << endl;
+ }
+    }   
