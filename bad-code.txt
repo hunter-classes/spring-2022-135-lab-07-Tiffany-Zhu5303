@@ -6,3 +6,5 @@ cout << i;
           cout << endl;
  }
     }
+
+cout << "{}{}{}{{this should be indented normally" << endl;

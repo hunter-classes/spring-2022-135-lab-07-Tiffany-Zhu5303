@@ -22,17 +22,26 @@ std::string actualIndent(std::string fileName){
   std::string line;
   
   std::string spaces = "";
+  int stringCount = 0;
 
   while (getline(text, line)){
     std::cout << spaces << line << std::endl;
 
-    if(countChar(line, '{') > 0){
-      spaces += "\t";
+    if(countChar(line, '"') > 0 && stringCount == 0){
+      stringCount++;
+    }else if(countChar(line,'"') > 0 && stringCount > 0){
+      stringCount = 0;
+    }else if(stringCount == 0){
       
-    }else if(countChar(line, '}') > 0){
-      spaces = spaces.substr(0, spaces.length() - 1);
-    }
 
+      if(countChar(line, '{') > 0){
+	spaces += "\t";
+      
+      }else if(countChar(line, '}') > 0){
+	spaces = spaces.substr(0, spaces.length() - 1);
+      }
+
+    }
   }
 
   text.close();
